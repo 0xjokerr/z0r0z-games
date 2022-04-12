@@ -18,11 +18,25 @@ contract VaultFactoryTest is DSTest {
     function setUp() public {
         sushi = new MockERC20("Sushi Token", "SUSHI", 18);
         sushi.mint(address(this), 10 ether);
-        game = new SquishiGame(sushi);
+
+        address predictedAddress = address(uint160(uint(keccak256(abi.encodePacked(
+            bytes1(0xff),
+            address(this),
+            bytes32("1"),
+            keccak256(abi.encodePacked(
+                type(SquishiGame).creationCode,
+                abi.encode(sushi)
+            ))
+        )))));
+
+        sushi.mint(predictedAddress, 29 ether);
+        game = new SquishiGame{salt: bytes32("1")}(sushi);
+        assertEq(predictedAddress, address(game));
     }
 
     function testSanity() public {
         assertEq(game.players(), 0);
+        // assertEq(address(g), address(game));
     }
 
     function testPlay() public {
@@ -39,7 +53,7 @@ contract VaultFactoryTest is DSTest {
         assertEq(game.players(), 2);
         assertTrue(game.isAlive(address(p2)));
 
-        assertEq(game.pot(), 0);
+        assertEq(game.pot(), 29 ether);
 
 
         // Play
@@ -69,9 +83,11 @@ contract VaultFactoryTest is DSTest {
         assertEq(game.players(), 1);
         assertEq(sushi.balanceOf(address(game)), 4 ether);
 
-        assertEq(game.pot(), 0);
+        assertEq(game.pot(), 29 ether);
 
-        assertEq(game.potClaimed(), 0); // dafuq
+        assertEq(game.potClaimed(), 29 ether); // dafuq
+
+        assertEq(sushi.balanceOf(address(p)), 31 ether);
     }
 }
 
