@@ -1,0 +1,248 @@
+{
+  "_format": "ethers-rs-sol-cache-3",
+  "paths": {
+    "artifacts": "out",
+    "sources": "src",
+    "tests": "test",
+    "libraries": [
+      "lib"
+    ]
+  },
+  "files": {
+    "/workspace/z0r0z-games/lib/ds-test/src/test.sol": {
+      "lastModificationDate": 1649740534334,
+      "contentHash": "5d45a46528eaf8a26f0a8d93669f3148",
+      "sourceName": "lib/ds-test/src/test.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.4.23",
+      "artifacts": {
+        "DSTest": {
+          "0.8.6+commit.11564f7e.Linux.gcc": "test.sol/DSTest.json"
+        }
+      }
+    },
+    "/workspace/z0r0z-games/lib/solmate/src/erc20/ERC20.sol": {
+      "lastModificationDate": 1649740534346,
+      "contentHash": "d9bfde8960333a0f4a52a488229243b9",
+      "sourceName": "lib/solmate/src/erc20/ERC20.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "ERC20": {
+          "0.8.6+commit.11564f7e.Linux.gcc": "ERC20.sol/ERC20.json"
+        }
+      }
+    },
+    "/workspace/z0r0z-games/lib/solmate/src/test/utils/MockERC20.sol": {
+      "lastModificationDate": 1649740534350,
+      "contentHash": "2b01aa149dfe78ad779098fb22ed2449",
+      "sourceName": "lib/solmate/src/test/utils/MockERC20.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [
+        "lib/solmate/src/erc20/ERC20.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "MockERC20": {
+          "0.8.6+commit.11564f7e.Linux.gcc": "MockERC20.sol/MockERC20.json"
+        }
+      }
+    },
+    "/workspace/z0r0z-games/src/SquishGame.t.sol": {
+      "lastModificationDate": 1649744989391,
+      "contentHash": "da72570e9f1e61e73a95661f8b4ef0ef",
+      "sourceName": "src/SquishGame.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [
+        "lib/ds-test/src/test.sol",
+        "lib/solmate/src/erc20/ERC20.sol",
+        "lib/solmate/src/test/utils/MockERC20.sol",
+        "src/SquishiGame.sol",
+        "src/utils/vm.sol"
+      ],
+      "versionRequirement": "=0.8.6",
+      "artifacts": {
+        "Player": {
+          "0.8.6+commit.11564f7e.Linux.gcc": "SquishGame.t.sol/Player.json"
+        },
+        "VaultFactoryTest": {
+          "0.8.6+commit.11564f7e.Linux.gcc": "SquishGame.t.sol/VaultFactoryTest.json"
+        }
+      }
+    },
+    "/workspace/z0r0z-games/src/SquishiGame.sol": {
+      "lastModificationDate": 1649745055271,
+      "contentHash": "779c44fc8553d0dc61d64d3ac07c28e7",
+      "sourceName": "src/SquishiGame.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [
+        "lib/solmate/src/erc20/ERC20.sol"
+      ],
+      "versionRequirement": "=0.8.6",
+      "artifacts": {
+        "SquishiGame": {
+          "0.8.6+commit.11564f7e.Linux.gcc": "SquishiGame.sol/SquishiGame.json"
+        }
+      }
+    },
+    "/workspace/z0r0z-games/src/utils/vm.sol": {
+      "lastModificationDate": 1649741541892,
+      "contentHash": "e48f332cc43f4c767c2e9c84171229d7",
+      "sourceName": "src/utils/vm.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.6.0",
+      "artifacts": {
+        "Vm": {
+          "0.8.6+commit.11564f7e.Linux.gcc": "vm.sol/Vm.json"
+        }
+      }
+    }
+  }
+}
